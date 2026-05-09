@@ -32,7 +32,7 @@ The second bug is due to reading registers from the 8291A GPIB IC in the incorre
 
 ### Methodology
 
-Binary dumps of the original firmware for A2U12 (label 08904-87007, [a2u12.bin](a2u12.bin)) and A2U13 (label 08904-87008, [a2u13.bin](a2u13.bin)) were disassembled with [unidasm](https://github.com/mamedev/mame). The service manual only mentions the need to change A2U12 to resolve issues, providing an existence proof that A2U13 need not be modified, but the code is included in analysis in case it contains anything relevant to the understanding and tracing of the bug.
+Binary dumps of the original firmware for A2U12 (label 08904-87007, [a2u12.bin](a2u12.bin)) and A2U13 (label 08904-87008, [a2u13.bin](a2u13.bin)) were disassembled with [unidasm](https://github.com/mamedev/mame). These disassembly listings have misaligned segments and data like strings improperly decoded as instructions, but this did not end up being a problem. More importantly, the disassembly listing gives us a way to insert comments in the raw code. The service manual only mentions the need to change A2U12 to resolve issues, providing an existence proof that A2U13 need not be modified, but the code is included in analysis in case it contains anything relevant to the understanding and tracing of the bug.
 
 I used a combination of Opus 4.6 with high effort and GPT 5.4 with xhigh effort throughout.
 
